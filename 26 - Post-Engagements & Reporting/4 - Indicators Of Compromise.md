@@ -1,0 +1,3 @@
+Red teams may also provide other useful indicators of compromise (IoC) that don't necessarily fit into the observation sections. This is often provided as an annex to the report and can include everything from domain names, IP addresses, artifact filenames, md5 checksums and more. This also helps any deconfliction process at a later date.
+
+There is an excellent set of guides and templates available on [https://redteam.guide](https://redteam.guide/docs/guides).
