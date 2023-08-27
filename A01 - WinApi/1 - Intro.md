@@ -1,0 +1,7 @@
+The Windows API is a set of programming interfaces available in the Windows OS.  They are readily accessible in C and C++ languages as they expose all the necessary data structures, but can be used from a variety of languages if those data structures and calling conventions are defined by the programmer (we'll see this when we look at P/Invoke).  You'll often see "Windows API" referred to as WinAPIs or Win32 APIs.
+
+The use of WinAPIs are practically essential for offensive operations on Windows.  Actions such as host enumeration, starting processes, process injection, token manipulation and more, are underpinned by these APIs.  The most commonly used set of WinAPIs are the base services (**kernel32.dll**) and advanced services (**advapi32.dll**).
+
+In addition to the WinAPIs, there are the Native APIs.  Most of the Native API calls are implemented in **ntoskrnl.exe** (the Windows kernel image) and exposed to user mode via **ntdll.dll**.  These APIs are not strictly designed to be called directly from user applications, and as such are not as accessible as the WinAPIs.  The higher-level WinAPIs actually call these Native APIs in the background.  For example, OpenProcess in **kernel32.dll** calls NtOpenProcess in **ntdll.dll**.
+
+However, there are OPSEC reasons as to why we'd want to call NtOpenProcess directly instead of OpenProcess - which we'll uncover when we look at userland API hooking.  For now, we're going to learn how to call basic Win32 APIs.

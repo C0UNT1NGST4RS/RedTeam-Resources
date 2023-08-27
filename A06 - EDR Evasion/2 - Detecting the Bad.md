@@ -1,0 +1,5 @@
+EDR agents like to primarily monitor the use of Windows APIs - as we've seen, these are used to perform actions such as process injection and a slew of others that we like to do from our C2.  But how do you monitor which APIs every running process on a machine is using?
+
+A logical place to start is with a driver, since these are designed to have the same privilege level as the kernel itself.  In the past, this allowed AV and EDR vendors to patch kernel code in order to inspect API calls as they transitioned into the kernel from userland.  However, Microsoft introduced Kernel Patch Protection (aka "PatchGuard"), which prevents patching of the kernel.
+
+This forced security vendors to re-evaluate how they perform these inspections.  Most must now carry out their inspection in userland, which is achieved by "API Hooking".  There are multiple ways to do this - we'll look at "inline" and "IAT" hooking.

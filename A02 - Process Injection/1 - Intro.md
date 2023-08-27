@@ -1,0 +1,3 @@
+Now that we have an understanding of how to call Windows APIs, let's write some process injectors using Cobalt Strike shellcode.  To generate the shellcode, go to **Attacks > Packages > Windows Executable (S)** and select **Raw** as the output type.  Then use **Attacks > Web Drive-by > Host File** to host the file on the team server's web server.
+
+> These injectors will be written and tested on the Attacker Windows VM, which can talk directly to our Linux VM (10.10.0.69), so we don't need to use the redirectors.
