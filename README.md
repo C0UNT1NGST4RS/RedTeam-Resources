@@ -238,5 +238,5 @@ If you're reading this, there has been already some versions around, but if they
 #### LDAP (Lightweight Directory Access Protocol)
 - [Hunting for reconnaissance activities using LDAP search filter (Microsoft)](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/hunting-for-reconnaissance-activities-using-ldap-search-filters/ba-p/824726)
 
-### Disclaimer !
+## Disclaimer !
 All the credits belong to the original authors and publishers.
